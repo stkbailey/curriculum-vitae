@@ -14,16 +14,16 @@
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{colorlinks, breaklinks, urlcolor=linkcolour, linkcolor=linkcolour}
 
 %FONTS
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 %%% modified for Karol Kozioł for ShareLaTeX use
 \setmainfont[
-SmallCapsFont = Fontin-SmallCaps.otf,
-BoldFont = Fontin-Bold.otf,
-ItalicFont = Fontin-Italic.otf
+    SmallCapsFont = Fontin-SmallCaps.otf,
+    BoldFont = Fontin-Bold.otf,
+    ItalicFont = Fontin-Italic.otf
 ]
 {Fontin.otf}
 %%%
@@ -33,7 +33,7 @@ ItalicFont = Fontin-Italic.otf
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
 \titlespacing{\section}{0pt}{3pt}{3pt}
 %Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
+\addtolength{\voffset}{-1.3cm}
 
 %Italian hyphenation for the word: ''corporations''
 \hyphenation{im-pre-se}
@@ -48,19 +48,6 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
-
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
 
 \pagestyle{empty} % non-numbered pages
 
@@ -79,7 +66,7 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabular}{rl}	
 
     \textsc{Exp.} 2018 & Doctor of Philosophy in \textsc{Neuroscience}, \textbf{Vanderbilt University}, Nashville\\
-    & Dissertation: ``The brain network architecture of reading.'' | \small Advisor: Laurie \textsc{Cutting}\\\\
+    & Dissertation: ``The brain network architecture of reading.'' | \small Advisor: \textsc{Laurie Cutting}\\ \\
     
     \textsc{May} 2011 & Bachelor of Science and Bachelor of Arts, \textbf{Samford University}, Birmingham\\
     & \small\emph{summa cum laude} | Majors: Philosophy \& Chemistry\\
@@ -104,10 +91,10 @@ ItalicFont = Fontin-Italic.otf
 	\multicolumn{2}{c}{} \\
     
 	\textsc{Fall} 2017 & App Developer at \textsc{Vanderbilt Center for Tech Transfer}, Nashville \\
-	&\emph{Software for assessing the "readability" of text}\\
+	&\emph{Created core technology for patent-pending software}\\
 	&\footnotesize{
 	\begin{itemize}
-	    \item Created Python application to scale lab-developed "readability" algorithm to all English words and efficiently analyze a variety of documents. 
+	    \item Used Python application to scale lab-developed "readability" algorithm to all English words and efficiently analyze a variety of documents. 
 	    \item Used SQLite database and pandas to store data for word and scoring metrics.
 	    \item Used NLTK (Word2Vec, FreqDict, Stemmers) to apply metric to a variety of documents.
 	    \item Collaborated with consultant to implement algorithms into Django application. 
@@ -146,10 +133,13 @@ ItalicFont = Fontin-Italic.otf
 
 \section{Projects and activities}
 \begin{tabular}{rl}
-    \textsc{2017} & Co-founder of \textsc{Nashville Data Nerds} Meetup Group \\
-    & \emph{Building data science community in Nashville}\\
-    & \footnotesize{Formed a Kaggle }\\
+    \textsc{Oct.} 2017 & Co-founder of \textsc{Nashville Data Nerds} Meetup Group \\
+    & \emph{Building data science community in Nashville} | \href{www.meetup.com/}{Website}\\
     \multicolumn{2}{c}{} \\
+
+    \textsc{Aug. 2014} & V.P. of Education for \textsc{Vanderbilt Toastmasters\\
+    & \emph{Sharpening speaking techniques and supporting others' development.} \\
+
 \end{tabular}
 
 
@@ -172,9 +162,6 @@ ItalicFont = Fontin-Italic.otf
     \textsc{Aug. 2016} & \textsc{Lead ELL Instructor} at \textsc{Conexion Americas}, Nashville \\
     & \emph{Volunteer teacher for refugees and immigrants seeking better speaking skills.} \\ 
     
-    \textsc{Aug. 2014} & \textsc{VP of Education} for \textsc{Vanderbilt Toastmasters\\
-    & \emph{Sharpening speaking techniques and supporting others' development.} \\
-
 \end{tabular}
 
 
@@ -182,11 +169,12 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabular}{rl}
     \textsc{April} 2018 & \textsc{Most Impactful Kernel} for \textsc{Kaggle's 2018 Data Science Bowl}.\\
 
-    \textsc{March} 2018 & One of six Vanderbilt graduate students selected to serve on the University's \textsc{Graduate Student Housing Committee}.\\
+    \textsc{March} 2018 & Finalist for Vanderbilt's \textsc{3 Minute Thesis} competition \\
+    & \footnotesize{One of the top ten presentations from Vanderbilt graduate students for presenting dissertation work in less than three minutes.}\\
 	
-    \textsc{Sept.} 2016 & \textsc{\href{https://projectreporter.nih.gov/project_info_description.cfm?aid=9328269&icde=35806628}{NIH F31 National Research Service Award}, highly competitve fellowship for predoctoral students, valued at more than \$90,00 \ffootnotesize(\EURcr 90,000)\normalsize\\
+    \textsc{Sept.} 2016 & Won \textsc{\href{https://projectreporter.nih.gov/project_info_description.cfm?aid=9328269&icde=35806628}{NIH F31 National Research Service Award}, highly competitve fellowship for predoctoral students, valued at more than \$90,000.\\
     
-    \textsc{June} 2013 & Scored in the 99th percentile overall of the {\textsc{GRE}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 730 (\textsc{q:50;v:39}) 98\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile) \\
+    \textsc{June} 2013 & Scored in the 99th percentile overall of the {\textsc{GRE}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 730 (\textsc{q:50;v:39}) 98\textsuperscript{th} percentile; (89\textsuperscript{th} percentile) \\
 
     \textsc{May 2011} & Awarded \textsc{Omicron Delta Kappa}'s John D. Morgan Award for outstanding scholarship and leadership.\\
 
@@ -200,11 +188,11 @@ ItalicFont = Fontin-Italic.otf
 \section{Selected Publications}
 \footnotsize{For a full list, please see \href{...}{Google Scholar}.}
 \begin{tabular}{rl}
+    \textsc{In press} & \textsc{Applying a network framework to the neurobiology of reading and dyslexia} \\
+    & \emph{Journal of Neurodevelopmental Disabilities} | \href{...}{In press}
+
     \textsc{Oct.} 2017 & \textsc{Detection of synchronous brain activity in white matter tracts at rest and under functional loading}
     & \emph{Proceedings of the National Academy of Sciences} | \href{http://www.pnas.org/content/early/2017/12/26/1711567115.long}{Paper} \\
-
-    \textsc{TBD} & \textsc{Applying a network framework to the neurobiology of reading and dyslexia} \\
-    & \emph{Journal of Neurodevelopmental Disabilities} | \href{...}{In press}
 
     \textsc{May} 2017 & Fronto-parietal structural connectivity in childhood predicts development of functional connectivity and reasoning ability: a large-scale longitudinal investigation\\
     & \emph{Journal of Neuroscience} | \href{http://www.jneurosci.org/content/37/35/8549}{Paper}
@@ -213,7 +201,7 @@ ItalicFont = Fontin-Italic.otf
     & \emph{Annals of Dyslexia} | \href{https://link.springer.com/article/10.1007/s11881-015-0114-y}{Paper} \\
 
     \textsc{March} 2011 & \textsc{Certainly Uncertain: Nietzchean Pessimism for an Optimistic World}\\
-    & \emph{Stance} | \href{...}{Paper} \\
+    & \emph{Stance: An undergraduate journal of philosophy} | \href{...}{Paper} \\
 
 \end{tabular}
 
