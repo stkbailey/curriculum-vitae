@@ -8,8 +8,11 @@
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage[big]{layaureo} 				%better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
+\usepackage{supertabular}
+\usepackage{multirow}                   %for Grades
 \usepackage{titlesec}					%custom \section
+\usepackage{longtable}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -55,161 +58,153 @@
 
 %--------------------TITLE-------------
 \par{\centering
-		{\Huge Stephen \textsc{Bailey}
+		{\Huge Stephen Kent \textsc{Bailey}
 	}\\ \medskip}
-\centering{\href{https://stkbailey.github.io}{stkbailey.github.io} $\bullet$ \href{mailto:stkbailey@gmail.com}{stkbailey@gmail.com}}
+\centering{
+    \href{https://stkbailey.github.io}{stkbailey.github.io} $\bullet$ \href{mailto:stkbailey@gmail.com}{stkbailey@gmail.com}
+}
 
 
 %--------------------SECTIONS----------------------------------
-%Section: Education
 \section{Education}
-\begin{tabular}{rl}	
+\begin{tabular}{rp{11cm}}	
 
-    \textsc{Exp.} 2018 & Doctor of Philosophy in \textsc{Neuroscience}, \textbf{Vanderbilt University}, Nashville\\
-    & Dissertation: ``The brain network architecture of reading.'' | \small Advisor: \textsc{Laurie Cutting}\\ \\
+    \textsc{Exp.} 2018 & \textsc{Doctor of Philosophy} in \textsc{Neuroscience}, \textbf{Vanderbilt University}\\
+    & Dissertation: ``The brain network architecture of reading.''  \smallskip \\
     
-    \textsc{May} 2011 & Bachelor of Science and Bachelor of Arts, \textbf{Samford University}, Birmingham\\
-    & \small\emph{summa cum laude} | Majors: Philosophy \& Chemistry\\
+    \textsc{May} 2011 & Bachelor of Science and Bachelor of Arts, \textbf{Samford University}\\
+    & Majors: Philosophy and Chemistry | \emph{summa cum laude} \\
 
 \end{tabular}
 
 
-%Section: Work Experience at the top
 \section{Work Experience}
-\begin{tabular}{r|p{11cm}}
- 
- 	\emph{Current} & NIH Predoctoral Fellow at \textsc{Vanderbilt University}, Nashville \\
- 	\textsc{Aug. 2013}&\emph{Basic biomedical sciences research}\\
- 	&\footnotesize{
- 	\begin{itemize}
-    	\item Used multi-modal MRI to describe how the brain changes during childhood, specializes for language and is refined by reading education.
-    	\item Utilized diverse analytical methods, including support vector machines, GLM, ICA/PCA, graph theory, and timeseries analysis, to accomplish research aims.
-        \item Authored 8 papers (3 first author) published in peer-reviewed journals,  including  \textit{PNAS} and the  \textit{Journal of Neuroscience}.
-        \item Worked with lab members and outside developers to manage lab imaging database of 13,000+ scans, and directed migration to web-based storage platform (XNAT).
+\begin{longtable}{r|p{11cm}}
+ 	\emph{Current} & NIH Predoctoral Fellow at \textsc{Vanderbilt University} \\
+ 	\textsc{Aug. 2013} & \emph{Biomedical research leveraging computer vision and machine learning} \footnotesize{
+ 	\begin{itemize}[itemsep=1pt,topsep=2pt]
+    	\item Used multi-modal MRI to describe how the brain changes during childhood, specializes for language and is refined by reading education. 
+    	\item Utilized diverse analytical methods, including support vector machines, GLM, ICA/PCA, graph theory, and timeseries analysis, to accomplish research aims. 
+        \item Authored 8 papers (3 first author) published in peer-reviewed journals,  including  \textit{PNAS} and the  \textit{Journal of Neuroscience}. 
+        \item Worked with lab members and outside developers to manage lab imaging database of 13,000+ scans, and directed migration to web-based storage platform.
         \item Analyzed large imaging datasets (up to 1 TB) in a scientific computing cluster.
-	\end{itemize}}\\
-	\multicolumn{2}{c}{} \\
+	\end{itemize} } \\
+	\multicolumn{2}{c}{}\\
     
-	\textsc{Fall} 2017 & App Developer at \textsc{Vanderbilt Center for Tech Transfer}, Nashville \\
-	&\emph{Created core technology for patent-pending software}\\
-	&\footnotesize{
-	\begin{itemize}
+	\textsc{Jan.} 2018 & App Developer at \textsc{Vanderbilt Center for Tech Transfer} \\
+	\textsc{June} 2017&\emph{Created core technology for patent-pending software}
+	\footnotesize{
+	\begin{itemize}[itemsep=1pt,topsep=2pt]
 	    \item Used Python application to scale lab-developed "readability" algorithm to all English words and efficiently analyze a variety of documents. 
+	    
 	    \item Used SQLite database and pandas to store data for word and scoring metrics.
+	    
 	    \item Used NLTK (Word2Vec, FreqDict, Stemmers) to apply metric to a variety of documents.
+	    
 	    \item Collaborated with consultant to implement algorithms into Django application. 
     \end{itemize}}\\
  	\multicolumn{2}{c}{} \\
 
-    \textsc{2017} & Data Analyst at \textsc{Metro Nashville Public Schools}, Nashville \\
-    &\footnotesize{
-    \begin{itemize}[topsep=0pt]
+    \textsc{Aug.} 2017 & Data Analyst at \textsc{Metro Nashville Public Schools} \\
+    \textsc{May} 2017 & \emph{Supported executive decision-making with live hiring and retention reports.}
+    \footnotesize{
+    \begin{itemize}[itemsep=1pt,topsep=2pt]
         \item Synthesized data from multiple systems (state, local, internal) to create live reports on teaching force retention and hiring trends. 
         \item \href{...}{Power BI reports} were shared district-wide with 130+ school and administrative leaders. 
         \item Collaborated with a variety of stakeholders, from data architects to executive leadership.
     \end{itemize}}\\
-    \multicolumn{2}{c}{}
+    \multicolumn{2}{c}{}\\
 
-    \textsc{2013} & Director of Insitute Technology at \textsc{Teach For America}, Mississippi Delta\\
-    &\footnotesize{
-    \begin{itemize}
-        \item Managed four-person team delivering tech support, printing and copying services for more than 800 teachers. 
+    \textsc{May} 2013 & Director of Institute Technology at \textsc{Teach For America} \\
+    \textsc{Jan.} 2013 & \emph{Delivered print and tech supoort services to 800+ teachers}
+    \footnotesize{
+    \begin{itemize}[itemsep=1pt,topsep=2pt]
+        \item Led four-person team through \href{...}{vision-driven leadership} and regular meetings. 
         \item Improved upon previous year's satisfaction ratings by 10\%. 
-        \item Crafted personalized, \href{}{mission-embedded vision documents}.
-    }\\
-    \multicolumn{2}{c}{}
+    \end{itemize}}\\
+    \multicolumn{2}{c}{} \\
 
-    \textsc{2011} & Manager of Regional Operations at \textsc{Teach For America}, Alabama\\
-    &\footnotesize{
+    \textsc{June} 2013 & Manager of Regional Operations at \textsc{Teach For America}, Alabama \\
+    \textsc{May} 2011 & \emph{Sole operations employee for start-up region of nonprofit.}
+    \footnotesize{
     \begin{itemize}
-        \item Oversaw \$119,000 Americorps grant and managed relationships with key parties. Awarded an additional \$66,000 in my 2nd year, a 55\% increase over first year.
+        \item{Oversaw \$119,000 Americorps grant and managed relationships with key parties. Awarded an additional \$66,000 in my 2nd year, a 55\% increase over first year.}
         \item Designed year-long orientation program to support more than 80 incoming teachers with the transition to Alabama, including creating 10 online training presentations, 4 annual recruitment campaigns, and week-long orientation program.
         \item Organized logistics of two week-long conferences for more than 90 attendees and more than 10 other large professional development events.
     \end{itemize}
-    }\\
-    \multicolumn{2}{c}{}
-\end{tabular}
-
-
-\section{Projects and activities}
-\begin{tabular}{rl}
-    \textsc{Oct.} 2017 & Co-founder of \textsc{Nashville Data Nerds} Meetup Group \\
-    & \emph{Building data science community in Nashville} | \href{www.meetup.com/}{Website}\\
-    \multicolumn{2}{c}{} \\
-
-    \textsc{Aug. 2014} & V.P. of Education for \textsc{Vanderbilt Toastmasters\\
-    & \emph{Sharpening speaking techniques and supporting others' development.} \\
-
-\end{tabular}
-
-
-\section{Presentations and Teaching}
-\begin{tabular}{rl}
-    \textsc{Aug.} 2018 & \textsc{Online Course: Biomedical Imaging Analysis in Python}
-    & \emph{An introduction to the principles of computer vision for DataCamp.com}\\
-    & \footnotesize{Sole designer and instructor for this online learning course on DataCamp.com. To be released in August 2018.}\\
-
-    \textsc{June} 2018 & \textsc{Reorganization of Resting-State Networks during Reading and Listening}\\
-    & \emph{Invited presentation at the Organization for Human Brain Mapping} | \href{...}{Video} \\
-
-    \textsc{April} 2018 & \textsc{Deconvoluting Convolutions: U-Nets for Object Detection}\\
-    & Presentation delivered to the \textsc{Nashville Data Science Meetup}. | \href{https://github.com/stkbailey/deconv-conv)}{Slides}\\
-
-    \textsc{Feb.} 2018 & \textsc{Principles of Network Analysis with NetworkX}\\
-    & Tutorial delivered at the \textsc{PyTennessee} regional conference. | \href{https://github.com/stkbailey/nashnetx/presentations}{Slides}, \href{...}{Data}\\
-    & \footnotesize{Presentation also given to the Nashville Software School's Data Science Bootcamp.}\\
-
-    \textsc{Aug. 2016} & \textsc{Lead ELL Instructor} at \textsc{Conexion Americas}, Nashville \\
-    & \emph{Volunteer teacher for refugees and immigrants seeking better speaking skills.} \\ 
-    
-\end{tabular}
-
-
-\section{Awards and Honors}
-\begin{tabular}{rl}
-    \textsc{April} 2018 & \textsc{Most Impactful Kernel} for \textsc{Kaggle's 2018 Data Science Bowl}.\\
-
-    \textsc{March} 2018 & Finalist for Vanderbilt's \textsc{3 Minute Thesis} competition \\
-    & \footnotesize{One of the top ten presentations from Vanderbilt graduate students for presenting dissertation work in less than three minutes.}\\
-	
-    \textsc{Sept.} 2016 & Won \textsc{\href{https://projectreporter.nih.gov/project_info_description.cfm?aid=9328269&icde=35806628}{NIH F31 National Research Service Award}, highly competitve fellowship for predoctoral students, valued at more than \$90,000.\\
-    
-    \textsc{June} 2013 & Scored in the 99th percentile overall of the {\textsc{GRE}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 730 (\textsc{q:50;v:39}) 98\textsuperscript{th} percentile; (89\textsuperscript{th} percentile) \\
-
-    \textsc{May 2011} & Awarded \textsc{Omicron Delta Kappa}'s John D. Morgan Award for outstanding scholarship and leadership.\\
-
-	\textsc{May} 2011 & Winner of \textsc{Samford University's Service Award}, given to one graduating senior for contributions to the university and Birmingham community.\\
-	
-    \textsc{May} 2011 & Winner of \textsc{Samford's Greek Man of the Year} award, given to one man for embodying the ideals of Greek excellence.\\
-
-\end{tabular}
-
-
-\section{Selected Publications}
-\footnotsize{For a full list, please see \href{...}{Google Scholar}.}
-\begin{tabular}{rl}
-    \textsc{In press} & \textsc{Applying a network framework to the neurobiology of reading and dyslexia} \\
-    & \emph{Journal of Neurodevelopmental Disabilities} | \href{...}{In press}
-
-    \textsc{Oct.} 2017 & \textsc{Detection of synchronous brain activity in white matter tracts at rest and under functional loading}
-    & \emph{Proceedings of the National Academy of Sciences} | \href{http://www.pnas.org/content/early/2017/12/26/1711567115.long}{Paper} \\
-
-    \textsc{May} 2017 & Fronto-parietal structural connectivity in childhood predicts development of functional connectivity and reasoning ability: a large-scale longitudinal investigation\\
-    & \emph{Journal of Neuroscience} | \href{http://www.jneurosci.org/content/37/35/8549}{Paper}
-
-    \textsc{May} 2016 & \textsc{Anomalous gray matter patterns in specific reading comprehension deficits are independent of dyslexia}
-    & \emph{Annals of Dyslexia} | \href{https://link.springer.com/article/10.1007/s11881-015-0114-y}{Paper} \\
-
-    \textsc{March} 2011 & \textsc{Certainly Uncertain: Nietzchean Pessimism for an Optimistic World}\\
-    & \emph{Stance: An undergraduate journal of philosophy} | \href{...}{Paper} \\
-
-\end{tabular}
+    } \\
+\end{longtable}
 
 
 \section{Software}
-\begin{tabular}{rl}
-    Advanced:& \textsc{Python} (esp. scipy, pandas, matplotlib, scikit-learn), \textsc{Matlab}, \textsc{bash}, \textsc{Microsoft Power BI and all Office products}, 
-    Intermediate:& \textsc{Keras}, \textsc{SQL}, \textsc{Docker/Singularity}, \textsc{R}, \textsc{Linux}, ubuntu, {\fb \LaTeX}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\\\
+\begin{longtable}{rp{11cm}}
+    Advanced & Python (esp. scipy, pandas, matplotlib, scikit-learn), Matlab, bash, Microsoft Power BI and all Office products \\
+    Intermediate & Keras, SQL, Docker/Singularity, R, Linux, ubuntu, \setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}\\
+\end{longtable}
+
+
+\section{Presentations and Teaching}
+\begin{longtable}{rp{11cm}}
+    \textsc{Aug.} 2018 & \textsc{Online Course: Biomedical Imaging Analysis in Python} \\
+    & \emph{An introduction to the principles of computer vision for DataCamp.com} \smallskip \\
+
+    \textsc{June} 2018 & \textsc{Reorganization of Resting-State Networks during Reading and Listening: a dvelopmental perspective} \\
+    & \emph{Invited talk at the 2018 Human Brain Mapping meeting} | \href{https://www.humanbrainmapping.org/files/2018/Oral\%20Session/Language.pdf}{Program} \smallskip \\
+
+    \textsc{April} 2018 & \textsc{Deconvoluting Convolutions: U-Nets for Object Detection}\\
+    & Presentation delivered to the \href{https://www.meetup.com/Data-Science-Nashville/events/249853957/}{\textsc{Nashville Data Science Meetup}}. | \href{https://github.com/stkbailey/deconv-conv)}{Repo} \smallskip \\
+
+    \textsc{Feb.} 2018 & \textsc{Principles of Network Analysis with NetworkX}\\
+    & Tutorial delivered at the \textsc{PyTennessee} regional conference. | \href{https://github.com/stkbailey/nashnetx/presentations}{Repo}  \smallskip\\
+
+    \textsc{Aug. 2016} & \textsc{Lead ELL Instructor} at \textsc{Conexi\'on Am\'ericas} \\
+    & \emph{Volunteer instructor for course catered to immigrants and refugees.} \\ 
+\end{longtable}
+
+
+\section{Awards and Honors}
+\begin{longtable}{rp{11cm}}
+    \textsc{April} 2018 & \textsc{Most Impactful Kernel} for \textsc{Kaggle's 2018 Data Science Bowl}. \smallskip \\
+
+    \textsc{March} 2018 & Finalist for Vanderbilt's \textsc{3 Minute Thesis} competition  \smallskip \\
+	
+    \textsc{Sept.} 2016 & Won \href{https://projectreporter.nih.gov/project_info_description.cfm?aid=9328269&icde=35806628}{\textsc{NIH F31 National Research Service Award}}, highly competitve fellowship for predoctoral students, valued at more than \$90,000. \smallskip \\
+    
+    \textsc{June} 2013 & Scored in the 99th percentile overall of the {\textsc{GRE}\textregistered}\setmainfont[SmallCapsFont=Fontin-SmallCaps.otf]{Fontin.otf}: 730 (\textsc{q:50;v:39}) 98\textsuperscript{th} percentile; (89\textsuperscript{th} percentile) \smallskip \\
+
+    \textsc{May 2011} & Awarded \textsc{Omicron Delta Kappa}'s \href{https://odk.org/wp-content/uploads/2018/01/Scholarship-Opportunities-List.pdf}{John D. Morgan Scholarship}, given out to the "top overall undergraduate applicant" in ODK. \smallskip \\
+
+	\textsc{May} 2011 & Winner of \href{https://www.samford.edu/news/2011/Samford-Students-Cited-for-Service-Leadership}{\textsc{Samford University's Service Award}}, awarded to one senior for "best exemplifying qualities of social service". \smallskip \\
+	
+    \textsc{May} 2011 & Winner of \textsc{Samford's Greek Man of the Year} award, given to one man for embodying the ideals of Greek excellence.\\
+
+\end{longtable}
+
+
+\section{Selected Publications}
+\begin{tabular}{rp{12cm}}
+    \multicolumn{2}{l}{\textit{For a full list, please see my citations on \href{https://scholar.google.com/citations?user=s3nPF1MAAAAJ&hl=en}{Google Scholar}.}} \smallskip \\
+    
+    \textsc{In press} & Bailey et al. Applying a network framework to the neurobiology of reading and dyslexia. \emph{Journal of Neurodevelopmental Disabilities}. \smallskip \\
+
+    \href{http://www.pnas.org/content/early/2017/12/26/1711567115.long}{2018} & Ding et al. Detection of synchronous brain activity in white matter tracts at rest and under functional loading. \emph{PNAS}. \smallskip \\
+
+    \href{http://www.jneurosci.org/content/37/35/8549}{2017} & Wendelken et al. Fronto-parietal structural connectivity predicts development of functional connectivity and reasoning. \emph{Journal of Neuroscience} \smallskip \\
+
+    \href{https://link.springer.com/article/10.1007/s11881-015-0114-y}{2016} & Bailey et al. Anomalous gray matter patterns in specific reading comprehension deficits are independent of dyslexia. \emph{Annals of Dyslexia}. \smallskip \\
+
+    \href{https://www.pdcnet.org/scholarpdf/show?id=stance_2011_0004_0015_0026&pdfname=stance_2011_0004_0015_0026.pdf&file_type=pdf}{2011} & Bailey. Certainly Uncertain: Nietzchean Pessimism for an Optimistic World. \emph{Stance}. \\
+
+\end{tabular}
+
+
+\section{Other Projects and activities}
+\begin{tabular}{rp{11cm}}
+    \textsc{Oct.} 2017 & Co-founder of \textsc{Nashville Data Nerds} \href{https://www.meetup.com/Data-Nerds/}{MeetUp} \\
+    & \emph{Fostering a data science community in Nashville} \smallskip \\
+
+    \textsc{Aug. 2014} & V.P. of Education for \textsc{Vanderbilt Toastmasters} \\
+    & \emph{Sharpening speaking techniques and supporting others' development.} \\
 \end{tabular}
 
 
